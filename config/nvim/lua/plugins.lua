@@ -17,4 +17,5 @@ return require('packer').startup(function(use)
 		  config = function()
 		    require("which-key").setup {}
 	end }
+	use 'lewis6991/gitsigns.nvim'
 end)

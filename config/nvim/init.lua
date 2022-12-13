@@ -13,3 +13,4 @@ require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
 require("lspconfig").clangd.setup{}
 require("bufferline").setup{}
+require('gitsigns').setup()
