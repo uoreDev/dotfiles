@@ -16,6 +16,7 @@ case $OSTYPE in
   ;;
   linux)
     # commands for Linux go here
+	export PATH="$HOME/project/esp-clang/bin:$PATH"
   ;;
 esac
 
