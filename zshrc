@@ -10,11 +10,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 case $OSTYPE in
-  darwin)
+  darwin*)
     # commands for OS X go here
-	export PATH="/opt/homebrew/bin:$PATH"
   ;;
-  linux)
+  linux*)
     # commands for Linux go here
 	export PATH="$HOME/project/esp-clang/bin:$PATH"
   ;;
