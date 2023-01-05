@@ -18,3 +18,6 @@ case $OSTYPE in
     # commands for Linux go here
   ;;
 esac
+
+# Add go binary path
+export PATH="$HOME/go/bin:$PATH"
