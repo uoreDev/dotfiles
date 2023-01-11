@@ -9,25 +9,17 @@ return require('packer').startup(function(use)
 	-- Colorscheme / UI
 	use 'folke/tokyonight.nvim'
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-
 	use 'lewis6991/gitsigns.nvim'
 
 	-- LSP
 	use 'neovim/nvim-lspconfig'
-	use({"glepnir/lspsaga.nvim", branch = "main",
-    config = function()
-        local saga = require("lspsaga")
+	use 'glepnir/lspsaga.nvim'
 
-        saga.init_lsp_saga({
-            -- your configuration
-        })
-    end,
-	})
 	-- Autocompletion
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-nvim-lsp'
-	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
+	use 'saadparwaiz1/cmp_luasnip'
+    use 'L3MON4D3/LuaSnip'
 
 	-- Code display
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

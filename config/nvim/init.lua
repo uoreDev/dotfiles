@@ -8,7 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.cmd[[colorscheme tokyonight]]
-
+require("lspsaga").init_lsp_saga({})
 require("which-key").setup {}
 require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
