@@ -9,6 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.cmd[[colorscheme tokyonight]]
 
+require("which-key").setup {}
 require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
 require("bufferline").setup{}
