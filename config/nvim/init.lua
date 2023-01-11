@@ -8,6 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- set termguicolors to enable highlight groups
 vim.cmd[[colorscheme tokyonight]]
+
 require("lspsaga").init_lsp_saga({})
 require("which-key").setup {}
 require("nvim-tree").setup()
@@ -16,11 +17,7 @@ require("bufferline").setup{}
 require('gitsigns').setup()
 require("symbols-outline").setup()
 require('nvim-treesitter.install').update({ with_sync = true })
-require'nvim-treesitter.configs'.setup {
-	highlight = {
-		enable = true,
-	}
-}
+require ('plugins/nvim-treesitter')
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
