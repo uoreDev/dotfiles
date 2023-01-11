@@ -35,4 +35,5 @@ return require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
 	use 'simrat39/symbols-outline.nvim'
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 end)

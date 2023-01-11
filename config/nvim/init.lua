@@ -14,6 +14,12 @@ require("nvim-web-devicons").setup()
 require("bufferline").setup{}
 require('gitsigns').setup()
 require("symbols-outline").setup()
+require('nvim-treesitter.install').update({ with_sync = true })
+require'nvim-treesitter.configs'.setup {
+	highlight = {
+		enable = true,
+	}
+}
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
