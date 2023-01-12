@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 case $OSTYPE in
   darwin*)
     # commands for OS X go here
+	export PATH="/opt/homebrew/bin:$PATH"
   ;;
   linux*)
     # commands for Linux go here
