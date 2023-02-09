@@ -13,13 +13,13 @@ vim.cmd[[colorscheme tokyonight]]
 require("which-key").setup {}
 require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
-require("bufferline").setup{}
 require('gitsigns').setup()
 require("symbols-outline").setup()
 require('nvim-treesitter.install').update({ with_sync = true })
 require('diffview').setup()
 require ('plugins/nvim-treesitter')
 require ('plugins/lspsaga')
+require ('plugins/bufferline')
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
