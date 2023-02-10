@@ -20,6 +20,7 @@ require('diffview').setup()
 require ('plugins/nvim-treesitter')
 require ('plugins/lspsaga')
 require ('plugins/bufferline')
+require ('plugins/indent_blankline')
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
