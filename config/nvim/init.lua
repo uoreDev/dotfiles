@@ -10,7 +10,6 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.cmd[[colorscheme tokyonight]]
 
-require('luasnip')
 require('telescope').setup{}
 require("which-key").setup {}
 require("nvim-tree").setup()
@@ -32,10 +31,21 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'tsserver', 'html', 'cssls', 'gopls', 'lua_ls', 'vuels', 'cmake' }
+local servers = { 'clangd', 'tsserver', 'html', 'cssls', 'gopls', 'vuels', 'cmake' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
   }
 end
+
+lspconfig.lua_ls.setup {
+  capabilities = capabilities,
+  settings = {
+	Lua = {
+	  diagnostics = {
+		globals = {'vim'},
+	  },
+	},
+  },
+}
