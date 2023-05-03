@@ -1,7 +1,7 @@
 require('lspsaga').setup({
-	lightbulb = {
-		enable = false,
-	}
+  lightbulb = {
+    enable = false,
+  }
 })
 
 vim.keymap.set( 'n',       'K',         '<cmd>Lspsaga hover_doc<CR>')
