@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
 
   -- Colorscheme / UI
   use 'folke/tokyonight.nvim'
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   --- Git
   use 'lewis6991/gitsigns.nvim'
