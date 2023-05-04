@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
 
   -- Interface
   use {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
-  use 'simrat39/symbols-outline.nvim'
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Colorscheme / UI
