@@ -11,7 +11,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.cmd[[colorscheme tokyonight]]
 
 require('telescope').setup{}
-require("which-key").setup {}
 require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
 require('gitsigns').setup()

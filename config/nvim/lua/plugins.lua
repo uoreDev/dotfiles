@@ -28,6 +28,5 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- Other
-  use 'folke/which-key.nvim'
   use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
 end)
