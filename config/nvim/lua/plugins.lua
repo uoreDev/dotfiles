@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
   -- Interface
   use {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
+  use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Colorscheme / UI
