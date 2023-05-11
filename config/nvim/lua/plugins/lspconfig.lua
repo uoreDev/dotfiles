@@ -1,7 +1,7 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
-local servers = { 'clangd', 'tsserver', 'html', 'cssls', 'gopls', 'vuels', 'cmake' }
+local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'vuels', 'cmake', 'bufls' }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -22,4 +22,9 @@ lspconfig.lua_ls.setup {
       },
     },
   },
+}
+
+lspconfig.clangd.setup {
+  capabilities = capabilities,
+  filetypes = { "c", "cpp", "objc", "objcpp" },
 }
