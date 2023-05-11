@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'github/copilot.vim'
+  use {"williamboman/mason.nvim", run = ":MasonUpdate"}
 
   -- Autocompletion
   use 'hrsh7th/nvim-cmp'

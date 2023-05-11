@@ -17,6 +17,7 @@ require('gitsigns').setup()
 require('nvim-treesitter.install').update({ with_sync = true })
 require('diffview').setup()
 require('lualine').setup {extensions = {'nvim-tree'}}
+require("mason").setup()
 require ('plugins/nvim-treesitter')
 require ('plugins/lspsaga')
 require ('plugins/indent_blankline')
