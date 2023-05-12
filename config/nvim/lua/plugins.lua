@@ -31,4 +31,5 @@ return require('packer').startup(function(use)
 
   -- Other
   use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
+  use {'mfussenegger/nvim-dap'}
 end)
