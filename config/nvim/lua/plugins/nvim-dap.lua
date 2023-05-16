@@ -17,5 +17,5 @@ dap.configurations.go = {
 }
 
 vim.keymap.set('n', '<Leader>re', function() require('dap').repl.toggle({height = 10})end)
-vim.keymap.set('n', '<Leader>B',  function() require('dap').set_breakpoint() end)
+vim.keymap.set('n', '<Leader>B',  function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', '<Leader>C',  function() require('dap').continue() end)
