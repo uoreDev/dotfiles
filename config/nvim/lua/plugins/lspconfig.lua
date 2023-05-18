@@ -28,3 +28,17 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
   filetypes = { "c", "cpp", "objc", "objcpp" },
 }
+
+lspconfig.yamlls.setup {
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      hover = true,
+      completion = true,
+      validate = true,
+      schemas = {
+        kubernetes = {"*.yaml"},
+      },
+    },
+  },
+}
