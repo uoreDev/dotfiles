@@ -17,6 +17,7 @@ require('nvim-treesitter.install').update({ with_sync = true })
 require('diffview').setup()
 require('lualine').setup {extensions = {'nvim-tree'}}
 require("mason").setup()
+require('illuminate').configure()
 require ('plugins/gitsigns')
 require ('plugins/nvim-treesitter')
 require ('plugins/lspsaga')

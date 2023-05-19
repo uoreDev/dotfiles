@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
 
   -- Code display
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'RRethy/vim-illuminate'}
 
   -- Other
   use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
