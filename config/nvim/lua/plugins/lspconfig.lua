@@ -33,12 +33,17 @@ lspconfig.yamlls.setup {
   capabilities = capabilities,
   settings = {
     yaml = {
-      hover = true,
-      completion = true,
-      validate = true,
+      schemaStore = {
+        enable = true,
+        url = "https://www.schemastore.org/api/json/catalog.json",
+      },
       schemas = {
         kubernetes = {"*.yaml"},
+        ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
       },
+      hover = true,
+      completion = true,
+      validate = false,
     },
   },
 }
