@@ -11,7 +11,6 @@ vim.g.loaded_netrwPlugin = 1
 vim.cmd[[colorscheme tokyonight]]
 
 require('telescope').setup{}
-require("nvim-tree").setup()
 require("nvim-web-devicons").setup()
 require('nvim-treesitter.install').update({ with_sync = true })
 require('diffview').setup()
@@ -27,3 +26,4 @@ require ('plugins/copilot')
 require ('plugins/nvim-cmp')
 require ('plugins/lspconfig')
 require ('plugins/nvim-dap')
+require ('plugins/nvim-tree')
