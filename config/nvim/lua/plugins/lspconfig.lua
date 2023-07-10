@@ -27,6 +27,11 @@ lspconfig.lua_ls.setup {
 lspconfig.clangd.setup {
   capabilities = capabilities,
   filetypes = { "c", "cpp", "objc", "objcpp" },
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+    "--log=verbose",
+  },
 }
 
 lspconfig.yamlls.setup {
