@@ -22,3 +22,6 @@ esac
 
 # Add go binary path
 export PATH="$HOME/go/bin:$PATH"
+
+# Add mason binary path
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
