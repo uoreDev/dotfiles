@@ -31,6 +31,7 @@ lspconfig.clangd.setup {
     "clangd",
     "--offset-encoding=utf-16",
     "--log=verbose",
+    "--enable-config",
   },
 }
 
