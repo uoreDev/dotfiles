@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   use 'glepnir/lspsaga.nvim'
   use 'github/copilot.vim'
   use {"williamboman/mason.nvim", run = ":MasonUpdate"}
+  use {"jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" }}
 
   -- Autocompletion
   use 'hrsh7th/nvim-cmp'
