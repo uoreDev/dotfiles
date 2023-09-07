@@ -6,7 +6,6 @@ return require('packer').startup(function(use)
   use {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
   use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
   use "lukas-reineke/indent-blankline.nvim"
-  use {"folke/noice.nvim", requires = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}}
 
   -- Colorscheme / UI
   use 'folke/tokyonight.nvim'
