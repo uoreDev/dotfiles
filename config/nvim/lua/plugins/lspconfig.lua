@@ -1,7 +1,7 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
-local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'vuels', 'cmake', 'bufls' }
+local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'cmake', 'bufls' }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -9,6 +9,16 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.volar.setup{
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+  init_options = {
+    typescript = {
+        tsdk = "/usr/local/lib/node_modules/typescript/lib"
+    }
+  },
+  capabilities = capabilities,
+}
 
 lspconfig.lua_ls.setup {
   capabilities = capabilities,
