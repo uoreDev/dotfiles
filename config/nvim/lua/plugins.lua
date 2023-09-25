@@ -1,38 +1,35 @@
-return require('packer').startup(function(use)
-  -- Plugin manager
-  use 'wbthomason/packer.nvim'
-
+return require('lazy').setup({
   -- Interface
-  use {'nvim-tree/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
-  use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
-  use "lukas-reineke/indent-blankline.nvim"
+  {'nvim-tree/nvim-tree.lua', dependencies = {'nvim-tree/nvim-web-devicons'}},
+  {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }},
+  "lukas-reineke/indent-blankline.nvim",
 
   -- Colorscheme / UI
-  use 'folke/tokyonight.nvim'
+  'folke/tokyonight.nvim',
 
   --- Git
-  use 'lewis6991/gitsigns.nvim'
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  'lewis6991/gitsigns.nvim',
+  { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'github/copilot.vim'
-  use {"williamboman/mason.nvim", run = ":MasonUpdate"}
-  use {"jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" }}
+  'neovim/nvim-lspconfig',
+  'glepnir/lspsaga.nvim',
+  'github/copilot.vim',
+  {"williamboman/mason.nvim", build = ":MasonUpdate"},
+  {"jose-elias-alvarez/null-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
 
   -- Autocompletion
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'saadparwaiz1/cmp_luasnip',
+  'L3MON4D3/LuaSnip',
 
   -- Code display
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use {'RRethy/vim-illuminate'}
+  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+  {'RRethy/vim-illuminate'},
 
   -- Other
-  use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
-  use {'mfussenegger/nvim-dap'}
-  use {'wakatime/vim-wakatime'}
-end)
+  {'nvim-telescope/telescope.nvim', dependencies = 'nvim-lua/plenary.nvim'},
+  {'mfussenegger/nvim-dap'},
+  {'wakatime/vim-wakatime'},
+})
