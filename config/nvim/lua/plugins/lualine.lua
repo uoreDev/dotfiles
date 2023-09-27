@@ -1,11 +1,11 @@
 return {
-  "nvim-tree/nvim-tree.lua",
+  "nvim-lualine/lualine.nvim",
 
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
 
   config = function()
-    require('nvim-tree').setup{}
+    require('lualine').setup {extensions = {'nvim-tree'}}
   end,
 }
