@@ -10,4 +10,5 @@ vim.keymap.set('n', '\\gg', '<cmd>Neogit<CR>', { desc = "Neogit" })
 
 vim.keymap.set('n', '\\gh', '<cmd>Gitsigns preview_hunk_inline<CR>', { desc = "preview hunk" })
 vim.keymap.set('n', '\\gr', '<cmd>Gitsigns reset_hunk<CR>',          { desc = "reset hunk" })
+vim.keymap.set('n', '\\gb', '<cmd>Gitsigns blame_line<CR>',          { desc = "blame line" })
 -- Git --
