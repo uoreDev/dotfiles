@@ -6,6 +6,7 @@ hs.hotkey.bind({'option', 'cmd'}, 'r',  hs.reload)
 -- key bindding reference --> https://www.hammerspoon.org/docs/hs.hotkey.html
 local inputEnglish = "com.apple.keylayout.ABC"
 local esc_bind
+local backslash_bind
 
 function convert_to_eng_with_esc()
 	local inputSource = hs.keycodes.currentSourceID()
@@ -20,4 +21,17 @@ function convert_to_eng_with_esc()
 	esc_bind:enable()
 end
 
-esc_bind = hs.hotkey.new({}, 'escape', convert_to_eng_with_esc):enable()
+function convert_to_eng_with_backslash()
+	local inputSource = hs.keycodes.currentSourceID()
+
+	if not (inputSource == inputEnglish) then
+		hs.keycodes.currentSourceID(inputEnglish)
+	end
+
+  backslash_bind:disable()
+	hs.eventtap.keyStroke({}, '\\')
+	backslash_bind:enable()
+end
+
+esc_bind       = hs.hotkey.new({}, 'escape', convert_to_eng_with_esc):enable()
+backslash_bind = hs.hotkey.new({}, '\\', convert_to_eng_with_backslash):enable()
