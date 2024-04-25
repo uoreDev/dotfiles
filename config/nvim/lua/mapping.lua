@@ -12,3 +12,5 @@ vim.keymap.set('n', '\\gh', '<cmd>Gitsigns preview_hunk_inline<CR>', { desc = "p
 vim.keymap.set('n', '\\gr', '<cmd>Gitsigns reset_hunk<CR>',          { desc = "reset hunk" })
 vim.keymap.set('n', '\\gb', '<cmd>Gitsigns blame_line<CR>',          { desc = "blame line" })
 -- Git --
+
+vim.keymap.set('n', '<leader>b', ':buffer ', { desc = "buffer" })
