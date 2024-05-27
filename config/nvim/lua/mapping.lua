@@ -1,8 +1,12 @@
--- local bufopts = { noremap=true, silent=true, buffer=bufnr }
+local function toggle_inlay_hint()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end
+
 -- LSP --
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = "declaration" })
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition,  { desc = "definition" })
-vim.keymap.set('n', 'K',  vim.lsp.buf.hover,       { desc = "hover" })
+vim.keymap.set('n', 'gD',  vim.lsp.buf.declaration, { desc = "declaration" })
+vim.keymap.set('n', 'gd',  vim.lsp.buf.definition,  { desc = "definition" })
+vim.keymap.set('n', 'K',   vim.lsp.buf.hover,       { desc = "hover" })
+vim.keymap.set('n', '\\i', toggle_inlay_hint,       { desc = "toggle inlay hints" })
 -- LSP --
 
 -- Git --
