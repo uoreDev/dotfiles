@@ -15,7 +15,6 @@ require('lazy').setup('plugins')
 
 -- require ('plugins')
 require ('default')
-require ('autocmd')
 require ('mapping')
 
 -- disable netrw at the very start of your init.lua (strongly advised)
