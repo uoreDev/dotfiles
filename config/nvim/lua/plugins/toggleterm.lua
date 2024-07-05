@@ -1,10 +1,10 @@
 return {
   "akinsho/toggleterm.nvim",
 
-  config = function ()
-    require("toggleterm").setup()
+  config = true,
 
-    vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm<CR>', { desc = "toggle terminal" })
-    vim.keymap.set('t', '<Esc>',     '<C-\\><C-n>',         { noremap = true, silent = true })
-  end
+  keys = {
+    { mode = "n", "<leader>t", "<cmd>ToggleTerm<cr>",  desc = "ToggleTerm" },
+    { mode = "t", "<Esc>",     "<C-\\><C-n>",          noremap = true, silent = true },
+  },
 }

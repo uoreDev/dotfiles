@@ -10,7 +10,7 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require('lspconfig')
 
-    local servers = { 'tsserver', 'html', 'cssls', 'gopls', 'cmake', 'bufls' }
+    local servers = { 'html', 'cssls', 'gopls', 'cmake', 'bufls' }
 
     for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup {

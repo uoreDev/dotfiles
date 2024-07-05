@@ -6,6 +6,6 @@ return {
   },
 
   config = function()
-    require('lualine').setup {extensions = {'nvim-tree'}}
+    require('lualine').setup {extensions = {'neo-tree'}}
   end,
 }
