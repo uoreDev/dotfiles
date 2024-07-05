@@ -9,4 +9,12 @@ return {
     "MunifTanjim/nui.nvim",
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+
+  opts = {
+    enable_diagnostics = false,
+  },
+
+  keys = {
+    { "<leader>ft", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+  },
 }
