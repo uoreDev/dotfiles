@@ -10,5 +10,8 @@ return {
       'neo-tree',
       'symbols-outline',
     },
+    sections = {
+      lualine_x = {'encoding', 'filetype'},
+    },
   },
 }
