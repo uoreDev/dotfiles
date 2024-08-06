@@ -5,5 +5,6 @@ vim.o.updatetime = 800
 vim.o.pumheight = 15
 vim.lsp.set_log_level("WARN")
 vim.opt.swapfile = false
+vim.o.scrolloff = 10
 
 vim.cmd('set expandtab')
