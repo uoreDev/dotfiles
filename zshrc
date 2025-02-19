@@ -13,6 +13,7 @@ case $OSTYPE in
   darwin*)
     # commands for OS X go here
 	export PATH="/opt/homebrew/bin:$PATH"
+    source "$(brew --prefix)/etc/profile.d/z.sh"
   ;;
   linux*)
     # commands for Linux go here
