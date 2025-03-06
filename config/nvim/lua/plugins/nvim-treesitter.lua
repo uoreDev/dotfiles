@@ -36,6 +36,7 @@ return {
 
       highlight = {
         enable = true,
+        disable = {"json"},
       }
     }
     require('nvim-treesitter.install').update(
