@@ -14,8 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('plugins')
 
 -- require ('plugins')
-require ('default')
-require ('mapping')
+require('default')
+require('mapping')
+
+vim.lsp.enable({ 'clangd' , 'lua-language-server' })
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
