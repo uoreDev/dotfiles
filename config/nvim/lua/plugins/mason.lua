@@ -1,11 +1,7 @@
 return {
-  "williamboman/mason.nvim",
-
-  build = function()
-    vim.cmd[[MasonUpdate]]
-  end,
+  "mason-org/mason.nvim",
 
   config = function()
-    require('mason').setup{}
+    require("mason").setup()
   end,
 }
